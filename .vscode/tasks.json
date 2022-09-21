@@ -23,22 +23,6 @@
       "group": "build",
       "label": "03. npm: lint",
       "detail": "npm run lint",
-      "problemMatcher": [],
-    },
-    {
-      "type": "npm",
-      "script": "start:kube",
-      "group": "build",
-      "label": "04. npm: start:kube",
-      "detail": "telepresence swap deployment",
-      "problemMatcher": []
-    },
-    {
-      "label": "docker local build",
-      "detail": "prerequirments: npm run build, npm run lint, localhost:5000 registry server",
-      "type": "shell",
-      "command": "${workspaceFolder}/local_docker.sh",
-      "group": "build",
       "problemMatcher": []
     }
   ]
