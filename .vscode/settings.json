@@ -1,0 +1,27 @@
+{
+  "workbench.editor.highlightModifiedTabs": true,
+  "explorer.sortOrder": "type",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true,
+    "source.fixAll": true
+  },
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact"
+  ],
+  "css.validate": false,
+  "css.lint.ieHack": "warning",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "scss.validate": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true
+}

@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "wmaurer.change-case",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "msjsdiag.debugger-for-chrome",
+    "visualstudioexptteam.vscodeintellicode"
+  ],
+}
