@@ -11,7 +11,9 @@ export type LineChartOptions = {
 };
 
 export const useLineChart = (dataset: Dataset) => {
-  const [series, setSeries] = useState(dataset.map((it) => it.y));
+  const [series, setSeries] = useState(
+    dataset.map((battleHistory) => battleHistory.rate)
+  );
   const createOptions = useCallback(
     (options: LineChartOptions) => {
       const { title, x, y } = options;
