@@ -1,13 +1,22 @@
-import { DummyDataset } from "features/dummyData";
+import { BattleHistoryDB } from "features/DB";
 
-export const useBattleHistory = (userId: number) => {
+export const useBattleHistory = (userId: UserId) => {
+  const dataset = useBattleHistoryDataset(userId);
   const avarageRank =
-    DummyDataset.reduce(
+    dataset.reduce(
       (ac: number, current: BattleHistory) => ac + current.rank,
       0
-    ) / DummyDataset.length;
+    ) / dataset.length;
   return {
     avarageRank: avarageRank,
-    battleHistories: DummyDataset,
+    recentlyBattleHistories: dataset,
   };
+};
+
+export const useBattleHistoryDataset = (userId: UserId) => {
+  const battleHisotry = BattleHistoryDB.find((db) => db.userId === userId);
+
+  if (!battleHisotry) throw new Error();
+
+  return battleHisotry.dataset;
 };

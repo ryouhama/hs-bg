@@ -4,3 +4,5 @@ type BattleHistory = {
   rank: number;
   rate: number;
 };
+
+type Dataset = BattleHistory[];

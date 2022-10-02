@@ -2,9 +2,8 @@ import { useBattleHistory } from "features/battleHistory/hooks";
 import { useUser } from "features/user/hooks";
 import { Presenter } from "./presenter";
 
-type Props = {};
-export const Container: React.FC<Props> = () => {
+export const Container: React.FC = () => {
   const { user } = useUser();
-  const { avarageRank } = useBattleHistory(user.id);
-  return <Presenter avarageRank={avarageRank} />;
+  const { recentlyBattleHistories } = useBattleHistory(user.id);
+  return <Presenter battleHistories={recentlyBattleHistories} />;
 };

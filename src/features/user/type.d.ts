@@ -1,4 +1,6 @@
 type User = {
-  id: number;
+  id: UserId;
   name: string;
 };
+
+type UserId = number;

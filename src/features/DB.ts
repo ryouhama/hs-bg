@@ -1,4 +1,4 @@
-export const DummyDataset: Dataset = [
+const user1BattleHistory: Dataset = [
   {
     id: 1,
     hero: "ドレクサ−",
@@ -60,3 +60,5 @@ export const DummyDataset: Dataset = [
     rate: 6341,
   },
 ];
+
+export const BattleHistoryDB = [{ userId: 1, dataset: user1BattleHistory }];

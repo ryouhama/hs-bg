@@ -1,19 +1,27 @@
+import { RatingGraph } from "./ratingGraph";
+import { BattleHistories } from "./BattleHistories";
+import { PageLayout } from "pages/pageLayout";
 import { PropsWithChildren } from "react";
-import Box from "@mui/material/Box";
-import { BattleHistories } from "./battleHistories";
-import { Rating } from "./rating";
 
 type Props = {};
 
 export const Presenter: React.FC<Props> = () => {
   return (
-    <BoxSx>
-      <Rating />
-      <BattleHistories />
-    </BoxSx>
+    <PageLayout>
+      <TopSection>
+        <RatingGraph />
+      </TopSection>
+      <SubSection>
+        <BattleHistories />
+      </SubSection>
+    </PageLayout>
   );
 };
 
-const BoxSx: React.FC<PropsWithChildren> = ({ children }) => {
-  return <Box>{children}</Box>;
+const TopSection: React.FC<PropsWithChildren> = ({ children }) => {
+  return <>{children}</>;
+};
+
+const SubSection: React.FC<PropsWithChildren> = ({ children }) => {
+  return <>{children}</>;
 };
